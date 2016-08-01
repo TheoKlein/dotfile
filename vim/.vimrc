@@ -16,6 +16,7 @@ set cursorline
 
 "vim theme
 colorscheme Tomorrow-Night-Bright
+"colorscheme stereokai
 set t_Co=256
 
 "設定編碼
@@ -24,6 +25,13 @@ set enc=utf8
 "程式碼highlight
 syntax on
 
+"clipboard 設定
+set clipboard=unnamed
+
+"「下上」換成「上下」
+noremap j k
+noremap k j
+
 execute pathogen#infect()
 call pathogen#helptags()
 
@@ -31,4 +39,7 @@ call pathogen#helptags()
 autocmd vimenter * NERDTree
 
 "設定NERDTree寬度
-let g:NERDTreeWinSize=25
+let g:NERDTreeWinSize=30
+
+"NERDTree顯示隱藏檔案
+let NERDTreeShowHidden=1
