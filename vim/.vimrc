@@ -5,8 +5,9 @@ set ai
 set number
 
 "設定tab
-set tabstop=4
-set shiftwidth=4
+set expandtab 
+set tabstop=2
+set shiftwidth=2
 
 "自動換行
 set wrap
@@ -16,7 +17,7 @@ set cursorline
 
 "vim theme
 colorscheme Tomorrow-Night-Bright
-"colorscheme stereokai
+
 set t_Co=256
 
 "設定編碼
@@ -39,7 +40,7 @@ call pathogen#helptags()
 autocmd vimenter * NERDTree
 
 "設定NERDTree寬度
-let g:NERDTreeWinSize=30
+let g:NERDTreeWinSize=20
 
 "NERDTree顯示隱藏檔案
 let NERDTreeShowHidden=1
