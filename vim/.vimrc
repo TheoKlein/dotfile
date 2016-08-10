@@ -9,6 +9,9 @@ set expandtab
 set tabstop=2
 set shiftwidth=2
 
+"設定backspace
+set backspace=2
+
 "自動換行
 set wrap
 
