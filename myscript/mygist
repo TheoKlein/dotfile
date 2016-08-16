@@ -1,0 +1,10 @@
+#/bin/bash
+read -p "要上傳的檔案：" oldfile
+read -p "檔案描述：" description
+read -p "是否要更改上傳檔案名稱(y/n)？" answer
+if [ "$answer" == "y" ]; then
+  read -p "新的檔案名稱：" newfile
+  gist -d "$description" -f "$newfile" <"$oldfile" -e
+else
+  gist "$oldfile" -d "$description" -e
+fi
