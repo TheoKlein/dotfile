@@ -1,3 +1,21 @@
+set nocompatible              " be iMproved, required
+filetype off                  " required
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'jiangmiao/auto-pairs'
+Plugin 'scrooloose/nerdtree'
+Plugin 'jelera/vim-javascript-syntax'
+Plugin 'plasticboy/vim-markdown'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'majutsushi/tagbar'
+" All of your Plugins must be added before the following line
+call vundle#end()
+filetype plugin indent on
+
+
 "自動縮排
 set ai
 
@@ -6,8 +24,8 @@ set number
 
 "設定tab
 set expandtab 
-set tabstop=2
-set shiftwidth=2
+set tabstop=4
+set shiftwidth=4
 
 "設定backspace
 set backspace=2
@@ -20,6 +38,8 @@ set cursorline
 
 "vim theme
 colorscheme Tomorrow-Night-Bright
+"colorscheme molokai
+"colorscheme monokai
 
 set t_Co=256
 
@@ -36,8 +56,8 @@ set clipboard=unnamed
 noremap j k
 noremap k j
 
-execute pathogen#infect()
-call pathogen#helptags()
+" F8 開啟Tagbar
+nmap <F8> :TagbarToggle<CR>
 
 "開啟vim時自動開啟NERDTree
 autocmd vimenter * NERDTree
@@ -47,3 +67,7 @@ let g:NERDTreeWinSize=20
 
 "NERDTree顯示隱藏檔案
 let NERDTreeShowHidden=1
+
+"YCM自動關閉preview window
+let g:ycm_autoclose_preview_window_after_completion = 1
+let g:ycm_autoclose_preview_window_after_insertion = 1
