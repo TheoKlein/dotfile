@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Copy .tmux.conf
-cp tool/tmux/.tmux.conf ~/
+cp tools/tmux/.tmux.conf ~/
 
 # Install tpm
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
@@ -9,10 +9,10 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 source ~/.tmux.conf
 
 # Copy .vimrc
-cp tool/vim/.vimrc ~/
+cp tools/vim/.vimrc ~/
 
 # Copy vim
-cp -r tool/vim ~/.vim
+cp -r tools/vim ~/.vim
 rm ~/.vim/.vimrc
 
 source ~/.vimrc
