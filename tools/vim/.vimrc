@@ -12,7 +12,6 @@ Plugin 'garbas/vim-snipmate'
 " All of your Plugins must be added before the following line
 call vundle#end()
 filetype plugin indent on
-filetype plugin indent on
 filetype plugin on
 
 " 貼上模式
@@ -23,10 +22,6 @@ set ai
 
 "顯示行號
 set number
-
-"設定tab
-set tabstop=4
-set shiftwidth=4
 
 "設定backspace
 set backspace=2
