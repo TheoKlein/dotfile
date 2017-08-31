@@ -1,14 +1,14 @@
 snippet pwn
-        # -*- coding: utf-8 -*-
-        from pwn import *
+	# -*- coding: utf-8 -*-
+	from pwn import *
 
-        host = "${1}"
-        port = "${2}"
+	host = "${1}"
+	port = "${2}"
 
-        r = remote(host, port)
+	r = remote(host, port)
 
-        ${3}
+	${3}
 
-        r.recvline(":")
-        r.sendline()
-        r.interactive()
+	r.recvline(":")
+	r.sendline()
+	r.interactive()
