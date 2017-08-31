@@ -1,3 +1,0 @@
-#/bin/bash
-echo -e "Search & delete these files:\n.DS_Store ...\nThumbs.db ..."
-sudo find / -name ".DS_Store" -o -name "Thumbs.db" -depth -exec rm {} \;

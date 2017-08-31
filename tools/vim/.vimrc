@@ -4,17 +4,19 @@ filetype off                  " required
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'Valloric/YouCompleteMe'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'scrooloose/nerdtree'
-Plugin 'jelera/vim-javascript-syntax'
-Plugin 'plasticboy/vim-markdown'
-Plugin 'airblade/vim-gitgutter'
-Plugin 'majutsushi/tagbar'
+Plugin 'MarcWeber/vim-addon-mw-utils'
+Plugin 'tomtom/tlib_vim'
+Plugin 'garbas/vim-snipmate'
 " All of your Plugins must be added before the following line
 call vundle#end()
 filetype plugin indent on
+filetype plugin indent on
+filetype plugin on
 
+" 貼上模式
+set pastetoggle=<F1>
 
 "自動縮排
 set ai
@@ -60,7 +62,8 @@ noremap k j
 nmap <F8> :TagbarToggle<CR>
 
 "開啟vim時自動開啟NERDTree
-autocmd vimenter * NERDTree
+"autocmd vimenter * NERDTree
+map <silent> <C-n> :NERDTreeToggle<CR>
 
 "設定NERDTree寬度
 let g:NERDTreeWinSize=20
