@@ -25,7 +25,6 @@ set ai
 set number
 
 "設定tab
-set expandtab 
 set tabstop=4
 set shiftwidth=4
 
