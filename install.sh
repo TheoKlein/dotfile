@@ -17,5 +17,8 @@ rm ~/.vim/.vimrc
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 vim +PluginInstall +qall
 
+# Copy fish functions
+cp -r tools/fish/functions ~/.config/fish/functions
+
 # ubuntu .bashrc
 cp ubuntu/.bashrc ~/
