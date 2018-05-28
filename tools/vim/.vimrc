@@ -6,6 +6,7 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'scrooloose/nerdtree'
+Plugin 'majutsushi/tagbar'
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
 Plugin 'garbas/vim-snipmate'
@@ -14,14 +15,15 @@ call vundle#end()
 filetype plugin indent on
 filetype plugin on
 
-" 貼上模式
-set pastetoggle=<F1>
+set nofoldenable
 
 "自動縮排
 set ai
 
 "顯示行號
 set number
+
+set tabstop=4
 
 "設定backspace
 set backspace=2
@@ -33,9 +35,10 @@ set wrap
 set cursorline
 
 "vim theme
-colorscheme Tomorrow-Night-Bright
+"colorscheme Tomorrow-Night-Bright
 "colorscheme molokai
-"colorscheme monokai
+colorscheme monokai
+"colorscheme monokai-soda
 
 set t_Co=256
 
@@ -51,7 +54,6 @@ set clipboard=unnamed
 "「下上」換成「上下」
 noremap j k
 noremap k j
-
 " F8 開啟Tagbar
 nmap <F8> :TagbarToggle<CR>
 
