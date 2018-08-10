@@ -1,5 +1,7 @@
 #!/bin/sh
 
+sudo apt update && sudo apt install fish vim tmux -y
+
 # Copy .tmux.conf
 cp tools/tmux/.tmux.conf ~/
 
@@ -15,9 +17,6 @@ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 vim +PluginInstall +qall
 
 # Copy fish functions
-mkdir ~/.config
-mkdir ~/.config/fish
-cp -r tools/fish/functions ~/.config/fish/functions
-
-# ubuntu .bashrc
-cp ubuntu/.bashrc ~/
+mkdir -p ~/.config
+mkdir -p ~/.config/fish
+cp -rf tools/fish/functions ~/.config/fish/functions
