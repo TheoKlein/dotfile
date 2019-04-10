@@ -1,5 +1,5 @@
 #!/bin/sh
-
+sudo apt-add-repository ppa:fish-shell/release-3 -y
 sudo apt update && sudo apt install fish vim tmux -y
 
 # Copy .tmux.conf
