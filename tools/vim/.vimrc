@@ -3,13 +3,16 @@ filetype off                  " required
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
+Plugin 'zxqfl/tabnine-vim'
+Plugin 'scrooloose/nerdcommenter'
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'scrooloose/nerdtree'
 Plugin 'majutsushi/tagbar'
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
-Plugin 'garbas/vim-snipmate'
+Plugin 'sentientmachine/Pretty-Vim-Python'
+Plugin 'sakshamgupta05/vim-todo-highlight'
 " All of your Plugins must be added before the following line
 call vundle#end()
 filetype plugin indent on
@@ -19,11 +22,14 @@ set nofoldenable
 
 "自動縮排
 set ai
+set cindent
 
 "顯示行號
 set number
 
-set tabstop=4
+set tabstop=2
+set expandtab
+set shiftwidth=2
 
 "設定backspace
 set backspace=2
@@ -35,10 +41,9 @@ set wrap
 set cursorline
 
 "vim theme
-"colorscheme Tomorrow-Night-Bright
-"colorscheme molokai
-colorscheme monokai
-"colorscheme monokai-soda
+"colorscheme monokai
+colorscheme monokai-soda
+highlight Comment cterm=bold
 
 set t_Co=256
 
@@ -47,6 +52,7 @@ set enc=utf8
 
 "程式碼highlight
 syntax on
+let python_highlight_all=1
 
 "clipboard 設定
 set clipboard=unnamed
@@ -66,7 +72,3 @@ let g:NERDTreeWinSize=20
 
 "NERDTree顯示隱藏檔案
 let NERDTreeShowHidden=1
-
-"YCM自動關閉preview window
-let g:ycm_autoclose_preview_window_after_completion = 1
-let g:ycm_autoclose_preview_window_after_insertion = 1
