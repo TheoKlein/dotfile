@@ -1,5 +1,4 @@
-set nocompatible              " be iMproved, required
-filetype off                  " required
+
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -8,12 +7,10 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'scrooloose/nerdtree'
-Plugin 'majutsushi/tagbar'
-Plugin 'MarcWeber/vim-addon-mw-utils'
-Plugin 'tomtom/tlib_vim'
 Plugin 'sentientmachine/Pretty-Vim-Python'
 Plugin 'sakshamgupta05/vim-todo-highlight'
 " All of your Plugins must be added before the following line
+
 call vundle#end()
 filetype plugin indent on
 filetype plugin on
